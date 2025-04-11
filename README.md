@@ -1,3 +1,5 @@
+## Project Members
+Ada Mainetti, Kevin Warnakulasuriya, and Harry Zhao
 ## Title
 Child Speech Age Prediction
 ## Abstract
