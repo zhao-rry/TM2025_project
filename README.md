@@ -1,47 +1,47 @@
 ## Project Members
 Ada Mainetti, Kevin Warnakulasuriya, and Harry Zhao
 ## Title
-Child Speech Age Prediction
+Analysis of World War I Letters
 ## Abstract
-Our project focuses on predicting a child’s age based on a snippet of transcribed speech. First Language Acquisition is topical in our understanding of language, and we wish to use Text Mining to attempt to find patterns in speech development. Our research focuses on English transcripts of children in North America and the UK between the ages of 2-15 taken from the CHILDES database. 
+Our project focuses on applying text mining techniques to analyse a collection of transcribed letters sent during the First World War, between 1914 and 1918. By doing so, we hope to discover if the events of the war could be reflected in the contents and sentiments of these letters sent to and from the frontline. To do so, we approach this task using three different frameworks: sentiment analysis, topic modelling, and quantitative analysis.
+
 ## Research questions
-** Main Research Question: **
+**Main Research Question:**
 
-How accurately can you predict a child’s age based on their speech?
+How can we use computational methods to learn about lived experiences of World War I from transcribed letters?
 
-** Secondary Research Questions: **
+**Secondary Research Questions:**
 
-- What ages, if any, have the most identifiable speech patterns? What do they consist of?
-- Are there English Language mistakes often made by a certain age category?
-- What quantifiable characteristics can be seen develop as a child ages? E.g., vocabulary size, average sentence length
-- How much of a child’s conversation is necessary to reasonably accurately judge their age?
+- What are the main topics written about in these letters? Can we identify them using topic modelling?
+- What were the predominant sentiments of soldiers on the frontline and how did they change over time?
+- How much can quantitative measures of the textual data inform us about letter-writing practices during the war?
 
 ## Dataset
-We plan to source most of our data from the publicly available CHILDES database, which contains multiple corpora of transcribed children's and caretakers' speech in various languages. We will combine these corpora into a larger dataset in order to have enough samples to work with for our predictive model, as they individually only contain transcripts from a handful for children. Additionally, most of the dialogues are spoken by adults, which we are not interested in, so we will need to get as much raw data as possible.
-From our initial survey of the data, they do not have a standard way of transcribing information, meaning that we will have to extract and standardise the information during our preprocessing step. We will need to find a method for processing extra-verbal symbols (such as tags, intonation markers, pauses, etc.) or eliminating them.
+We obtained 60 transcribed letters from a public dataset hosted on kaggle.com at [this link](https://www.kaggle.com/datasets/anthaus/world-war-i-letters). This repository contains a JSON file of letters in both English and French. Other relevant metadata, such as the year and place of writing, being stored in a separate CSV file.
+
+To supplement our dataset, we manually inserted 32 more letters taken from the [UK National Archives](https://www.nationalarchives.gov.uk/education/resources/letters-first-world-war-1915) into the original JSON file. This gives us a total of roughly 90 letters, each with roughly two pages of text.
 
 ## Timeline
 By April 25
 - Read related literature
-- Preprocessing:
-- Downloaded and merging all the data from CHILDES
-- Extracting the child’s speech and labelling conversations by child’s age
-- Normalization and Lemmatization
-- (maybe) PoS Tagging
-- Models
+- Preprocessing
+    - Downloaded and merging datasets from Kaggle and the National Archives
+    - Normalization and Lemmatization
+    - (maybe) PoS Tagging
 - Selecting what models to use
 
 By May 9
-- Preprocessing 2:
-- Vectorizing the data
-- N-gram splits
+- Preprocessing
+- Apply pretrained sentiment analysis
 - Have at least one model trained
 - Refine secondary research questions
 - Refine hyperparameters
 
 By May 23
-- Evaluate the model and evaluate the model’s functioning
-- Finish paper 
+- Extras
+    - Extract more letters from other wars, run same processing steps and compare results
+- Qualitative analysis
+- Finish paper
 - Finish presentation
 
 ## Documentation
