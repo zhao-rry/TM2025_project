@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -35,10 +37,10 @@ def fetch_text_from_page(url):
                 lines = lines[:prev_index]
                 break
 
-    one_line_text = ' '.join(lines)
+    one_line_text = ' '.join(lines).rstrip(" Previous")
     return f'"{one_line_text}"'
 
-def fetch_and_save_multiple_pages(root_url, num_pages, filename):
+def fetch_and_save_multiple_pages(root_url, num_pages, filename, header):
     all_texts = []
 
     for i in range(1, num_pages + 1):
@@ -50,7 +52,7 @@ def fetch_and_save_multiple_pages(root_url, num_pages, filename):
         print(f"Fetching: {url}")
         text = fetch_text_from_page(url)
         if text:
-            all_texts.append(text)
+            all_texts.append(f'"{header}{i:03}": {text}')
 
     final_text = ', '.join(all_texts)
 
@@ -65,4 +67,5 @@ if __name__ == "__main__":
     root_url = input("Enter the root URL of the webpage: ")
     num_pages = int(input("Enter the number of pages to fetch: "))
     filename = input("Enter the output filename (e.g., output.txt): ")
-    fetch_and_save_multiple_pages(root_url, num_pages, filename)
+    header = input("Enter the header (as an index for JSON): ")
+    fetch_and_save_multiple_pages(root_url, num_pages, filename, header)
