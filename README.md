@@ -20,15 +20,23 @@ How can we use computational methods to learn about lived experiences of World W
 ## Repository Organization
 
 There are 3 subfolders:
-Bert_emotion_classifier: contains the model used in the sentiment analysis
-Data: contains the raw and the data preprocessed in the general_stats notebook.
-Gimme: contains the code used for web scraping during the data analysis process.
+
+- [BERT Emotion Classifier](./bert_emotion_classifier/): contains the model used in the sentiment analysis.
+
+- [Data](./data/): contains the raw and the data preprocessed in the general_stats notebook.
+
+- [Gimmie](./gimmie/): contains the code used for web scraping during the data analysis process.
 
 The code is organized into 3 main notebooks
-general_stats: Preprocessing and preliminary data analysis
-topicmodelling: Topic Modelling
-Sentiment_analysis: Sentiment Analysis. Currently split in 3 notebooks due to last minute issues in pushing to git: will be remediated as soon as possible
+
+- [General Statistics](./general_stats.ipynb): Preprocessing and preliminary data analysis.
+
+- [Topic Modelling](./topicmodelling.ipynb): Topic Modelling.
+
+- [Sentiment Analysis](./sentiment_analysis_final.ipynb): Sentiment Analysis.
 
 Final Analysis and Data Visualization is in:
-FinalReport.pdf 
-ww1letterspresent.pptx
+
+- [Final Report](./FinalReport.pdf)
+
+- [Presentation](./ww1letterspresent.pptx)
